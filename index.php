@@ -76,7 +76,15 @@
 				<p class="title">Team</p>
 			</div>
 			<div id="contact" class="page7" class="page">
-				<p class="title">Footer</p>
+				<p class = "formtitle">Contact Us</p>         
+
+            	<form id="testForm" class = "pure-form pure-form-stacked" method="post" action="#" name = "submit">
+                	<input name="name" class = "input-block" type="text" placeholder="Name">
+                	<input name="email" type="text" placeholder="Email">
+                	<input style="display:none;" type="text" name="email_" value="" />
+                	<textarea name="message" placeholder="Message"></textarea>
+                <input type="submit" class = "btn btn-block" value="Submit" name="submit">
+            	</form>
 			</div>
 		</div>
 	</body>	

@@ -93,6 +93,7 @@ html, body {
 .page7{
 	height: 800px;
 	background-color: black;
+	color: white;
 }
 
 .logo{
@@ -158,4 +159,65 @@ html, body {
 	width: 100%;
 	max-width: 235px;
 	margin-bottom: 20px;
+}
+
+form{
+	display: block;
+	width: 55%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+
+}
+
+input{
+	font-family: "QuickSandLight";
+	height: 36px;
+	padding-top: 6px;
+	padding-left: 15px;
+	border-radius: 0;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	width: 97%;
+	font-size: 1em;
+
+}
+
+textarea{
+	font-family: "QuickSandLight";
+	font-size: 1em;
+	border-radius: 0;
+	border: 1px solid white;
+	width: 97%;
+	height: 80px;
+	padding-left: 15px;
+	padding-top: 6px;
+	margin-bottom: 20px;
+}
+
+.btn{
+	font-family: "QuickSandLight";
+	text-align: center;
+	display: block;
+	background-color: white;
+	width: 100%;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	transition: color .5s, border-color .5s;
+
+}
+
+.btn:hover{
+	color: #10375E;
+	border-color: #10375E;
+}
+
+.formtitle{
+	text-decoration: none;
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	padding-top: 150px;
+	padding-bottom: 30px;
+	margin: 0;
 }
