@@ -6,16 +6,25 @@
 		<link rel="stylesheet" type = "text/css" href="Style/stylesheet.css">
 	</head>
 	<body>
-		<div class="container">
-			<div class="page1" class="page">
+
+		<div class="nav container">
+            <ul>
+                <?php
+                	include 'PHP/navigation.php';
+                ?>
+            </ul>
+        </div> <!--end navbar div-->
+
+		<div class="contain">
+			<div id="home" class="page1" class="page">
 				<img src="Images/Logo.png" alt="LOGO">
 				<p class = "logo">Learn More</p>
 			</div>
-			<div class="page2" class="page">
+			<div id ="about" class="page2" class="page">
 				<p class="title">About</p>
 				<p class="info">Dash is a fast-paced flight action game where you must maneuver around enemies to stay airborne. While traditional platformers use attacks as secondary actions, dashing is used to both navigate through the level and defeat opponents.</p>
 			</div>
-			<div class="page3" class="page">
+			<div id="characters" class="page3" class="page">
 				<p class="title">Characters</p>
 				<div class="player">
 					<span>
@@ -57,16 +66,16 @@
 					</span>
 				</div>
 			</div>
-			<div class="page4" class="page">
+			<div id="instructions" class="page4" class="page">
 				<p class="title">Instructions</p>
 			</div>
-			<div class="page5" class="page">
+			<div id="gallery" class="page5" class="page">
 				<p class="title">Gallery</p>
 			</div>
-			<div class="page6" class="page">
+			<div id="team" class="page6" class="page">
 				<p class="title">Team</p>
 			</div>
-			<div class="page7" class="page">
+			<div id="contact" class="page7" class="page">
 				<p class="title">Footer</p>
 			</div>
 		</div>
