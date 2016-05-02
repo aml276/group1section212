@@ -1,0 +1,123 @@
+html, body {
+	width: 100% !important;
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
+	height: 600% !important;
+	width: 100%;
+}
+
+.page{
+	width: 100%;
+}
+
+.page1{
+	background-color: #FFD9AB;
+	height: 800px;
+}
+
+.page1 img{
+	width: 40%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 100px;
+}
+
+.page2{
+	height: 800px;
+	background-color: #FDC57B;
+}
+
+.page3{
+	height: 1150px;
+	background-color: #FBB04B;
+}
+
+.page3 img{
+	width: 20%;
+	display: block;
+}
+.page4{
+	height: 800px;
+	background-color: #F68050;
+}
+.page5{
+	height: 800px;
+	background-color: #E36A4D;
+}
+.page6{
+	height: 800px;
+	background-color: #732D2F;
+}
+.page7{
+	height: 800px;
+	background-color: black;
+}
+
+.logo{
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.title{
+	text-align: center;
+	margin: 0px;
+	padding-top: 40px;
+	font-size: 2em;
+}
+
+.info{
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
+
+.subtitle{
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.player{
+	
+	width: 100%;
+}
+
+.player img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+}
+
+.player .bio{
+	width: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.opponents{
+	display: table;
+	width: 95%;
+	margin: 20px auto;
+}
+
+.opponents span{
+	display: table-cell;
+	text-align: center;
+	width: 18%;
+	padding: 0 2%;
+	font-size: 1em;
+}
+
+.opponents img{
+	width: 100%;
+	max-width: 235px;
+	margin-bottom: 20px;
+}
