@@ -3,9 +3,10 @@
 	<head>
 		<title>Dash - A fast paced flight action game coming soon to Android, iOS, and PC</title>
 		<link rel="stylesheet" type="text/css" href="Style/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	</head>
 	<body>
-
+		<script type="text/javascript" src="JS/smoothscroll.js"></script>
 		<div class="nav container">
             <ul>
                 <?php
