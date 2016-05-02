@@ -53,7 +53,7 @@ html, body {
 
 .page1{
 	background-color: #FFD9AB;
-	height: 800px;
+	min-height: 800px;
 }
 
 .page1 img{
@@ -65,33 +65,30 @@ html, body {
 }
 
 .page2{
-	height: 800px;
+	min-height: 800px;
 	background-color: #FDC57B;
 }
 
 .page3{
-	height: 1150px;
+	min-height: 1150px;
 	background-color: #FBB04B;
+	padding-bottom: 50px;
 }
 
-.page3 img{
-	width: 20%;
-	display: block;
-}
 .page4{
-	height: 800px;
+	min-height: 800px;
 	background-color: #F68050;
 }
 .page5{
-	height: 800px;
+	min-height: 800px;
 	background-color: #E36A4D;
 }
 .page6{
-	height: 800px;
+	min-height: 800px;
 	background-color: #732D2F;
 }
 .page7{
-	height: 800px;
+	min-height: 800px;
 	background-color: black;
 	color: white;
 }
@@ -144,7 +141,7 @@ html, body {
 .opponents{
 	display: table;
 	width: 95%;
-	margin: 20px auto;
+	margin: 0 auto;
 }
 
 .opponents span{
@@ -158,7 +155,12 @@ html, body {
 .opponents img{
 	width: 100%;
 	max-width: 235px;
+	margin-left: auto;
+	margin-right: auto;
 	margin-bottom: 20px;
+	border-radius: 20px;
+	border: 1px solid rgba(0,0,0,0.1);
+	    box-shadow: 0 0 23px rgba(0,0,0,0.3);
 }
 
 form{
