@@ -89,6 +89,9 @@
 			</div>
 			<div id="instructions" class="page" >
 				<h1>INSTRUCTIONS</h1>
+				<p class="info">Your task is simple yet challenging: complete the martial trials set by the gods themselves by dashing through your enemies.</p>
+				<p class="info">Master the art of flight as you explore distant lands on your journey to restore prestige to your fallen master's school.</p>
+				<p class="info">While traditional platformers use attacks as secondary actions, dashing is used to both navigate through the level and defeat your opponents. Sharpen your reflexes and get ready for our selective Beta release, coming soon.</p>
 			</div>
 			<div id="gallery" class="page" >
 				<h1>GALLERY</h1>

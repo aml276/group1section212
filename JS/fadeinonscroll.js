@@ -1,6 +1,6 @@
 $(document).ready(function() {
 //Original snippit from http://jsfiddle.net/tcloninger/e5qad/
-	var fadeinIdentifier = '.page p, .page h1, .page h2,.page h3,.page .roundedimage,.page .imagebox,input,form';
+	var fadeinIdentifier = '.page p, .page h1, .page h2,.page h3,.page .roundedimage,.page .imagebox,.page .layout, .page .staffpic,input,form';
 	$(fadeinIdentifier).css('opacity',0);
     $(window).scroll( function(){
         $(fadeinIdentifier).each( function(i){
