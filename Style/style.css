@@ -2,6 +2,9 @@ html, body {
 	width: 100% !important;
 	margin: 0px;
 	padding: 0px;
+	color: rgba(0,0,0,0.8);
+	//font-family: 'Alegreya Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 }
 
 .nav {
@@ -16,7 +19,7 @@ html, body {
 }
 .nav ul {
 	list-style: none;
-	font-family: "QuickSandLight";
+	//font-family: "QuickSandLight";
 	font-size: .9em;
 	letter-spacing: .15em;
 	color: #403336;
@@ -47,16 +50,12 @@ html, body {
 	width: 100%;
 }
 
-.page{
-	width: 100%;
-}
-
-.page1{
+#home{
 	background-color: #FFD9AB;
 	min-height: 800px;
 }
 
-.page1 img{
+#home img{
 	width: 40%;
 	display: block;
 	margin-left: auto;
@@ -64,30 +63,30 @@ html, body {
 	padding-top: 100px;
 }
 
-.page2{
-	min-height: 800px;
+#about{
+	min-height: 350px;
 	background-color: #FDC57B;
 }
 
-.page3{
+#characters{
 	min-height: 1150px;
 	background-color: #FBB04B;
 	padding-bottom: 50px;
 }
 
-.page4{
+#instructions{
 	min-height: 800px;
 	background-color: #F68050;
 }
-.page5{
+#gallery{
 	min-height: 800px;
 	background-color: #E36A4D;
 }
-.page6{
+#team{
 	min-height: 800px;
 	background-color: #732D2F;
 }
-.page7{
+#contact{
 	min-height: 800px;
 	background-color: black;
 	color: white;
@@ -98,13 +97,32 @@ html, body {
 	font-size: 1.5em;
 }
 
-.title{
-	text-align: center;
-	margin: 0px;
-	padding-top: 70px;
-	font-size: 2em;
+.page{
+	width: 100%;
+	font-size: 1.5em;
 }
 
+.page h1{
+	text-align: center;
+	margin: 0px;
+	padding-top: 50px;
+	font-size: 3em;
+	font-weight: 900;
+}
+.page h2{
+	font-size: 2em;
+	text-align: center;
+	font-weight: 900;
+}
+.page h3{
+	font-size: 1em;
+	text-align: center;
+	font-weight: 900;
+}
+.page h4{
+	font-size: 1em;
+	font-weight: 900;
+}
 .info{
 	text-align: center;
 	display: block;
@@ -113,10 +131,7 @@ html, body {
 	width: 50%;
 }
 
-.subtitle{
-	font-size: 1.5em;
-	text-align: center;
-}
+
 
 .player{
 	
@@ -127,9 +142,14 @@ html, body {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 20px;
+	margin-top : 20px;
+	max-width: 320px;
 }
-
+.roundedimage{
+	border-radius: 20px;
+	border: 1px solid rgba(0,0,0,0.3);
+	box-shadow: 0 3px 23px rgba(0,0,0,0.3);
+}
 .player .bio{
 	width: 50%;
 	display: block;
@@ -158,9 +178,6 @@ html, body {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
-	border-radius: 20px;
-	border: 1px solid rgba(0,0,0,0.1);
-	    box-shadow: 0 0 23px rgba(0,0,0,0.3);
 }
 
 form{

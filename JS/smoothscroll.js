@@ -7,8 +7,11 @@ $(document).ready(function(){
 
       $('html, body').stop().animate({
           'scrollTop': $target.offset().top
-      }, function () {
+      },
+	  800,
+	  "easeInOutExpo"
+	  , function () {
           window.location.hash = target;
-      }, 50);
+      });
   });
 });
