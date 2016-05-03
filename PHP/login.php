@@ -3,16 +3,12 @@
 <html>
 	<head>
 		<title>Login</title>
-		<link rel="stylesheet" type = "text/css" href="../Style/stylesheet.css">
-        <link rel="stylesheet" type = "text/css" href="../Style/background.css">
+        <link rel="stylesheet" type = "text/css" href="../Style/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script type="text/javascript" src="../js/form.js"></script>
 	</head>
 	<body>
-        <?php
-            $hashed = password_hash("passwordsaltysalt", PASSWORD_DEFAULT);
-            print($hashed);
-        ?>
+
 		<div class = "form">
       		<p class = "formtitle"> Login </p>         
 

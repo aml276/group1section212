@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,6 +25,21 @@
 			<div id="home" class="page">
 				<img src="Images/Logo.png" alt="LOGO">
 				<!-- <p class = "logo">Learn More</p> -->
+				<?php 
+            		if(isset($_SESSION['logged_user'])) {
+        		?>
+				<p class="login"><a href="PHP/logout.php">Logout</a></p>
+
+				<?php
+           			} else { 
+        		?>
+
+        		<p class="login"><a href="PHP/login.php">Login</a></p>
+
+        		<?php
+        			}
+        		?>
+
 				<br>
 			</div>
 			<div id ="about" class="page">
@@ -39,7 +55,7 @@
 					
 				</div>
 				<h2>YOUR OPPONENTS</h2>
-				<div class="opponents">
+				<div class="layout">
 					<span>
 						<img src="Images/wanderer.jpg" class="roundedimage" alt="Dash wanderer">
 						<br>
@@ -88,6 +104,36 @@
 			</div>
 			<div id="team" class="page" >
 				<h1>TEAM</h1>
+				<div class="layout">
+					<span>
+						<img src="Images/portrait.png" class="staffpic" alt="Dash wanderer">
+						<br>
+						Jackson
+						<br>
+						Developer
+					</span>
+					<span>
+						<img src="Images/portrait2.png" class="staffpic"  alt="Dash sentinel">
+						<br>
+						Aimee
+						<br>
+						Lead Design
+					</span>
+					<span>
+						<img src="Images/portrait3.png" class="staffpic"  alt="Dash aegis">
+						<br>
+						Michael
+						<br>
+						Marketing
+					</span>
+					<span>
+						<img src="Images/portrait4.png" class="staffpic"   alt="Dash ballista">
+						<br>
+						Emily
+						<br>
+						Developer
+					</span>
+				</div>
 			</div>
 			<div id="contact" class="page" >
 				<h1>CONTACT US</h1>     

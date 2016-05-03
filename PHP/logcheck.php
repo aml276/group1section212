@@ -14,7 +14,10 @@
 			$pass = filter_input(INPUT_POST, 'pass', FILTER_SANITIZE_STRING);
 			$salt = "saltysalt";
 
-			require_once 'connect.php';
+//			require_once 'connect.php';
+
+			require_once 'config.php';
+			$mysqli = new mysqli('localhost','grouponesp16', 'grouponesp16', 'info230_SP16_grouponesp16');
 
 			if ($user != '' && $pass != ''){
 				$query = "SELECT * FROM Login WHERE username = '$user'";

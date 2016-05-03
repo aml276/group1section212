@@ -45,6 +45,35 @@ html, body {
 .nav a:hover { 
     color: #FF2C3F;
 }
+
+.login{
+	text-align: center;
+    width: 100px;
+    border: white solid 2px;
+    padding: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFD9AB;
+    transition: background-color .5s;
+}
+
+.login:hover{
+	background-color: white;
+}
+
+.login a{
+	text-decoration: none;
+	display: block;
+	color: white;
+	transition: color .5s;
+}
+
+.login a:hover{
+	color: #FFD9AB;
+}
+
+
 .contain {
 	height: 600% !important;
 	width: 100%;
@@ -83,11 +112,11 @@ html, body {
 	background-color: #E36A4D;
 }
 #team{
-	min-height: 800px;
+	min-height: 550px;
 	background-color: #732D2F;
 }
 #contact{
-	min-height: 800px;
+	min-height: 600px;
 	background-color: black;
 	color: white;
 }
@@ -108,6 +137,7 @@ html, body {
 	padding-top: 50px;
 	font-size: 3em;
 	font-weight: 900;
+	padding-bottom: 30px;
 }
 .page h2{
 	font-size: 2em;
@@ -158,13 +188,13 @@ html, body {
 	text-align: center;
 }
 
-.opponents{
+.layout{
 	display: table;
 	width: 95%;
 	margin: 0 auto;
 }
 
-.opponents span{
+.layout span{
 	display: table-cell;
 	text-align: center;
 	width: 18%;
@@ -172,12 +202,16 @@ html, body {
 	font-size: 1em;
 }
 
-.opponents img{
+.layout img{
 	width: 100%;
 	max-width: 235px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
+}
+
+.staffpic{
+	border-radius: 50%;
 }
 
 form{
@@ -233,7 +267,7 @@ textarea{
 
 .formtitle{
 	text-decoration: none;
-	color: white;
+	color: black;
 	font-size: 2em;
 	text-align: center;
 	padding-top: 150px;
