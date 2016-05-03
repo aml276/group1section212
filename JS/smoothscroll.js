@@ -8,7 +8,7 @@ $(document).ready(function(){
       $('html, body').stop().animate({
           'scrollTop': $target.offset().top
       },
-	  800,
+	  1200,
 	  "easeInOutExpo"
 	  , function () {
           window.location.hash = target;

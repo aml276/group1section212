@@ -3,6 +3,7 @@
 	<head>
 		<title>Dash - A fast paced flight action game coming soon to Android, iOS, and PC</title>
 		<link rel="stylesheet" type="text/css" href="Style/style.css">
+		<link rel="stylesheet" type="text/css" href="Style/gallerystyle.css">
 		<link href='https://fonts.googleapis.com/css?family=Alegreya+Sans:400,700,300' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Raleway:400,900,700,200' rel='stylesheet' type='text/css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -10,6 +11,7 @@
 	</head>
 	<body>
 		<script type="text/javascript" src="JS/smoothscroll.js"></script>
+		<script type="text/javascript" src="JS/fadeinonscroll.js"></script>
 		<div class="nav container">
             <ul>
                 <?php
@@ -30,13 +32,12 @@
 				<br>
 			</div>
 			<div id="characters" class="page" >
-				<h1>Characters</h1> 
+				<h1>CHARACTERS</h1> 
 				<div class="player">
 						<img src="Images/player.jpg" class="roundedimage" alt="player">
 						<p class="bio">Your task is simple yet challenging: complete the martial trials set by the gods themselves by dashing through your enemies. Master the art of flight as you explore distant lands on your journey to restore prestige to your fallen master's school.</p>
 					
 				</div>
-				<br>
 				<h2>YOUR OPPONENTS</h2>
 				<div class="opponents">
 					<span>
@@ -71,16 +72,25 @@
 				
 			</div>
 			<div id="instructions" class="page" >
-				<h1>Instructions</h1>
+				<h1>INSTRUCTIONS</h1>
 			</div>
 			<div id="gallery" class="page" >
-				<h1>Gallery</h1>
+				<h1>GALLERY</h1>
+				<br>
+				<div class="imagegallery">
+					<div class="imagebox" style="background-image: url('Images/Concept1.jpg');">	</div>
+					<div class="imagebox" style="background-image: url('Images/Concept2.jpg');">	</div>
+					<div class="imagebox" style="background-image: url('Images/Concept3.jpg');">	</div>
+					<div class="imagebox" style="background-image: url('Images/Concept4.jpg');">	</div>
+					<div class="imagebox" style="background-image: url('Images/Concept5.jpg');">	</div>
+				</div>
+				<br>
 			</div>
 			<div id="team" class="page" >
-				<h1>Team</h1>
+				<h1>TEAM</h1>
 			</div>
 			<div id="contact" class="page" >
-				<h1>Contact Us</h1>     
+				<h1>CONTACT US</h1>     
 				<br>
             	<form id="testForm" class = "pure-form pure-form-stacked" method="post" action="#" name = "submit">
                 	<input name="name" class = "input-block" type="text" placeholder="Name">
@@ -89,6 +99,7 @@
                 	<textarea name="message" placeholder="Message"></textarea>
                 <input type="submit" class = "btn btn-block" value="Submit" name="submit">
             	</form>
+				<br>
 			</div>
 		</div>
 	</body>	
