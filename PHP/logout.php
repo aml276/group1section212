@@ -13,7 +13,7 @@
 	</head>
 	<body>
         <div class = "info">
-            <p> Thank you for logging out. Return to home <a href="../index.php">here.</a></a></p>
+            <p class="info"> Thank you for logging out. Return to home <a href="../index.php">here.</a></a></p>
         </div>
 	</body>
 </html>

@@ -17,27 +17,24 @@
 //			require_once 'connect.php';
 
 			require_once 'config.php';
-			$mysqli = new mysqli('localhost','grouponesp16', 'grouponesp16', 'info230_SP16_grouponesp16');
+			$mysqli = new mysqli('localhost','aml276sp16', 'password', 'info230_SP16_aml276sp16');
 
 			if ($user != '' && $pass != ''){
 				$query = "SELECT * FROM Login WHERE username = '$user'";
-				print($query);
 				$result = $mysqli->query($query);
-				var_dump($mysqli);
-				print($result);
 				if ($result && $result->num_rows == 1){
 					$row = $result->fetch_assoc();
 					$db_pass = $row['passwordHash'];
-					print($db_pass);
+					
 					if(password_verify($pass.$salt, $db_pass)){
 						$_SESSION['logged_user'] = $user;
-						print("<p class='output'>Success! Thank you for logging in $user.</p>");
+						print("<p class='info'>Success! Thank you for logging in $user.</p>");
 					}
 				} else {
-					print("<p class='output'>Error occurred, try again.</p>");
+					print("<p class='info'>Error occurred, try again.</p>");
 				}
 			} else {
-				print("<p class='output'>Please fill in all inputs!</p>");
+				print("<p class='info'>Please fill in all inputs!</p>");
 			}
 
 		?>
@@ -46,8 +43,8 @@
             if(isset($_SESSION['logged_user'])) {
         ?>
 
-        <div class = "info">
-            <p> Return to home <a href="../index.php">here.</a></p>
+        <div class = "">
+            <p class="info"> Return to home <a href="../index.php">here.</a></p>
         </div>
 
         <?php
@@ -64,6 +61,8 @@
             </form>
 
 		</div>
+
+		<p class= "info">Return to home <a href="../index.php">here.</a></p>
 
 		<?php
         }

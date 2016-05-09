@@ -3,7 +3,7 @@ html, body {
 	margin: 0px;
 	padding: 0px;
 	color: rgba(0,0,0,0.8);
-	//font-family: 'Alegreya Sans', sans-serif;
+	font-family: 'Alegreya Sans', sans-serif;
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -19,7 +19,6 @@ html, body {
 }
 .nav ul {
 	list-style: none;
-	//font-family: "QuickSandLight";
 	font-size: .9em;
 	letter-spacing: .15em;
 	color: #403336;
