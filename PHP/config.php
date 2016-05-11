@@ -9,4 +9,7 @@
 	//password
 	define('DB_PASSWORD', 'grouponesp16');
 
+	//email for contact
+	define('CONTACT_EMAIL', 'the.legend93434935@gmail.com');
+
 ?>
