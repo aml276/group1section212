@@ -15,32 +15,60 @@
 	<body>
 		<script type="text/javascript" src="JS/smoothscroll.js"></script>
 		<script type="text/javascript" src="JS/fadeinonscroll.js"></script>
+		
 		<div class="nav container">
-            <ul>
-                <?php
-                	include 'PHP/navigation.php';
-                ?>
-            </ul>
+                <ul class = "navbuttons"><?php include 'PHP/navigation.php'; ?> </ul>
+				
+				<?php 
+					if(isset($_SESSION['logged_user'])) {
+						echo ' <div class="login"> <a href="PHP/logout.php">Logout</a></div> <span style="float:right;margin: 18px 50px 0 0;">You are currently an admin!</span> ';
+					} else { ?>
+						<div class="login"><a href="javascript:;">Login</a></div>
+					
+						<script>
+						$( document ).ready(function() {
+									$('.login').click(function() {
+										var wrap = $(".loginform");
+										
+										if(wrap.css("display") == "none"){
+											wrap.slideToggle(1000,"easeOutElastic");
+										}else{
+											wrap.slideToggle(100);
+										}
+									});
+									$('.page').click(function(){
+										var wrap = $(".loginform");
+										if(wrap.css("display") != "none"){
+											wrap.slideToggle(100);
+										}
+									});
+						});
+						</script>			
+						
+					<?php ; }
+				?>
+			
+			<div class="loginform">
+				 <script type="text/javascript" src="JS/form.js"></script>
+				<div class = "form">
+					<p class = "formtitle"> Login </p>         
+					<form id="loginForm" class = "pure-form pure-form-stacked" method="post" action="PHP/logcheck.php" name = "submit" enctype="multipart/form-data">
+						<input name="user" class = "js-user input-block" type="text" placeholder="Username">
+						<input name="pass" class = "js-pass input-block" type="text" placeholder="Password">
+						<input type="submit" class = "js-submit btn btn-block" value="Submit" name="submit">
+					</form>
+				</div>
+			</div>
+			
         </div> <!--end navbar div-->
-
+		
 		<div class="contain">
+	
 			<div id="home" class="page">
+		
 				<img src="Images/Logo.png" alt="LOGO">
 				<!-- <p class = "logo">Learn More</p> -->
-				<?php 
-            		if(isset($_SESSION['logged_user'])) {
-        		?>
-				<p class="login"><a href="PHP/logout.php">Logout</a></p>
 
-				<?php
-           			} else { 
-        		?>
-
-        		<p class="login"><a href="PHP/login.php">Login</a></p>
-
-        		<?php
-        			}
-        		?>
 
 				<br>
 			</div>
@@ -102,9 +130,10 @@
 				if (isset($_SESSION['logged_user'])){
 				echo "
 					<div style='margin:auto;text-align:center;'>
-						<a href='PHP/add_image.php'>Add Image</a>  &nbsp;&nbsp;&nbsp;
-						<a href='PHP/add_album.php'>Add Album</a> &nbsp;&nbsp;&nbsp;
-						<a href='PHP/edit_image.php'>Edit Image</a> &nbsp;&nbsp;&nbsp;
+						<a href='PHP/add_image.php' class='title'>Add Image</a>  &nbsp;&nbsp;&nbsp;
+						<a href='PHP/add_album.php' class='title'>Add Album</a> &nbsp;&nbsp;&nbsp;
+						<a href='PHP/edit_image.php' class='title'>Edit Image</a> &nbsp;&nbsp;&nbsp;
+						<a href='PHP/delete_album.php' class='title'>Delete Album</a> &nbsp;&nbsp;&nbsp;
 					</div>";
 				}
 				?>
@@ -123,7 +152,7 @@
 						}
 						
 							echo "<div class= 'imagegallery'>
-										<h2> <a href='#!'>$row[title]</a></h2>
+										<h2> <a href='#!' style='margin-left: 7%;'>$row[title]</a></h2>
 										<div class='albumwrapper' $stylestr>
 										<br>
 											<div class='description'> $row[description]
@@ -137,8 +166,8 @@
 							while($row2 = $result2->fetch_assoc()){
 								$path = substr($row2['source_file'],3); 
 								
-								echo "<a href='$path ' data-lightbox='$row[albumID]' data-title='$row2[caption]'>";
-								echo '<div class="imagebox" style="background-image: url(\' ';
+								echo "<a href='$path' data-lightbox='$row[albumID]' data-title='$row2[caption]<br>Last modified on $row2[date_modified]'>";
+								echo '<div class="imagebox" style="background-image: url(\'';
 								echo $path;
 								echo'\');"> </div>';
 								

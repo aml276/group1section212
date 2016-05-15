@@ -1,0 +1,88 @@
+html, body {
+	width: 100% !important;
+	margin: 0px;
+	padding: 0px;
+	background: linear-gradient(135deg, #FDC57B, #FBB04B); 
+	-webkit-background: linear-gradient(135deg, #FDC57B, #FBB04B); 
+	color: rgba(0,0,0,0.8);
+	font-family: 'Raleway', sans-serif;
+}
+
+
+.loginForm{
+	display: block;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 40px;
+
+}
+
+.formblock{
+	margin-top: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	border-radius: 20px;
+	border: 1px solid rgba(0,0,0,0.3);
+	box-shadow: 0 3px 23px rgba(0,0,0,0.3);
+	background: white;
+}
+
+.formtitle{
+	text-decoration: none;
+	color: black;
+	font-size: 2em;
+	text-align: center;
+	margin-top: 4%;
+}
+
+.info {
+	color: black;
+	text-align: center;
+}
+
+.link{
+	text-decoration: none;
+	color: black;
+}
+
+input{
+	height: 36px;
+	padding-top: 6px;
+	padding-left: 15px;
+	border-radius: 0;
+	border: 1px solid #ccc;
+	margin-bottom: 20px;
+	width: 97%;
+	font-size: 1em;
+
+}
+
+textarea{
+	font-size: 1em;
+	border-radius: 0;
+	border: 1px solid #ccc;
+	width: 97%;
+	height: 80px;
+	padding-left: 15px;
+	padding-top: 6px;
+	margin-bottom: 20px;
+}
+
+.btn{
+	text-align: center;
+	display: block;
+	background-color: white;
+	width: 100%;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	transition: color .5s, border-color .5s;
+
+}
+
+.btn:hover{
+	color: #10375E;
+	border-color: #10375E;
+}

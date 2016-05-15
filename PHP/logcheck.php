@@ -1,5 +1,6 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
+<?php session_start(); ?>
+
 <html>
 	<head>
 		<title>Login</title>
@@ -8,7 +9,6 @@
          <script type="text/javascript" src="../JS/form.js"></script>
 	</head>
 	<body>
-
 		<?php
 			$user = filter_input(INPUT_POST, 'user', FILTER_SANITIZE_STRING);
 			$pass = filter_input(INPUT_POST, 'pass', FILTER_SANITIZE_STRING);
@@ -17,7 +17,7 @@
 //			require_once 'connect.php';
 
 			require_once 'config.php';
-			$mysqli = new mysqli('localhost','aml276sp16', 'password', 'info230_SP16_aml276sp16');
+			$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 			if ($user != '' && $pass != ''){
 				$query = "SELECT * FROM Login WHERE username = '$user'";
@@ -29,6 +29,9 @@
 					if(password_verify($pass.$salt, $db_pass)){
 						$_SESSION['logged_user'] = $user;
 						print("<p class='info'>Success! Thank you for logging in $user.</p>");
+						?>
+							<script>	window.location = "../index.php";</script>
+						<?php   ;
 					}
 				} else {
 					print("<p class='info'>Error occurred, try again.</p>");
@@ -46,7 +49,8 @@
         <div class = "">
             <p class="info"> Return to home <a href="../index.php">here.</a></p>
         </div>
-
+		
+			<script>	window.location = "../index.php";</script>
         <?php
             } else { 
         ?>

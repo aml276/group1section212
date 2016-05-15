@@ -13,7 +13,8 @@
 	</head>
 	<body>
         <div class = "info">
-            <p class="info"> Thank you for logging out. Return to home <a href="../index.php">here.</a></a></p>
+            <p class="info"> Thank you for logging out. Return to home <a href="../index.php">here.</a></p>
         </div>
+        <script>	window.location = "../index.php";</script>
 	</body>
 </html>

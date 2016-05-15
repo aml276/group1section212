@@ -1,10 +1,23 @@
+<?php session_start(); ?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add Album</title>
+		<link rel="stylesheet" type = "text/css" href="../Style/formstyle.css">
+	</head>
+	<body>
+
 <?php
-session_start();
 if (isset($_SESSION['logged_user'])){
 	include('config.php');
-	print '
-	<form id="edit_image" action="#" method="POST">
-	Select an image to delete:<br><br>';
+?>
+
+	<div class="formblock">
+		<p class="formtitle"> Delete/Edit Images </p>
+		<form class= "loginForm" id="edit_image" action="#" method="POST">
+
+<?php
 	$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 	$result = $mysqli->query("SELECT imageID, source_file, caption FROM Images");
 		while($row = $result->fetch_assoc()){
@@ -13,13 +26,18 @@ if (isset($_SESSION['logged_user'])){
 			$caption = $row['caption'];
 			print "<input type='checkbox' name='image_to_change[]' value=$imageID><br>filepath: $source<br> caption: $caption<br>";
 			print "<img src='$source' alt='$imageID' height='150px' width='150px'><br>";
-			print "edit caption: <input type='text' name='new_cap$imageID'><br><br>";
+			print "<input type='text' name='new_cap$imageID' placeholder='Caption'>";
 		}
 	$mysqli->close();
-	print '
-		<input type="submit" name="submit_image_update" value="Update Images"> <br>
-		<input type="submit" name="submit_image_delete" value="Delete Images"> <br>
-	</form>';
+
+?>
+		<input type="submit" name="submit_image_update" value="Update Images"> 
+		<input type="submit" name="submit_image_delete" value="Delete Images"> 
+	</form>
+	<p class = "info">Return <a href="../index.php" class="link">home</a></p>
+	</div>
+
+<?php
 
 	if (isset($_POST['submit_image_update'])){
 		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -50,5 +68,16 @@ if (isset($_SESSION['logged_user'])){
 		}
 		$mysqli->close();
 	}
+?>
+
+<?php 
+
+} else {
+?>
+	<p class="info">You are not logged in and cannot use this feature. <a href="../index.php" class="link">Return home</a></p>
+
+<?php 
 }
 ?>
+	</body>
+</html>

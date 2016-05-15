@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
 	//database host
 	define('DB_HOST', 'localhost');
