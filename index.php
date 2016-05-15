@@ -9,6 +9,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Raleway:400,900,700,200' rel='stylesheet' type='text/css'>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script   src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js"   integrity="sha256-55Jz3pBCF8z9jBO1qQ7cIf0L+neuPTD1u7Ytzrp2dqo="   crossorigin="anonymous"></script>
+		
+		<link href="Style/lightbox.css" rel="stylesheet">
 	</head>
 	<body>
 		<script type="text/javascript" src="JS/smoothscroll.js"></script>
@@ -92,19 +94,77 @@
 				<p class="info">Your task is simple yet challenging: complete the martial trials set by the gods themselves by dashing through your enemies.</p>
 				<p class="info">Master the art of flight as you explore distant lands on your journey to restore prestige to your fallen master's school.</p>
 				<p class="info">While traditional platformers use attacks as secondary actions, dashing is used to both navigate through the level and defeat your opponents. Sharpen your reflexes and get ready for our selective Beta release, coming soon.</p>
+				<br>
 			</div>
 			<div id="gallery" class="page" >
 				<h1>GALLERY</h1>
+				<?php
+				if (isset($_SESSION['logged_user'])){
+				echo "
+					<div style='margin:auto;text-align:center;'>
+						<a href='PHP/add_image.php'>Add Image</a>  &nbsp;&nbsp;&nbsp;
+						<a href='PHP/add_album.php'>Add Album</a> &nbsp;&nbsp;&nbsp;
+						<a href='PHP/edit_image.php'>Edit Image</a> &nbsp;&nbsp;&nbsp;
+					</div>";
+				}
+				?>
+				<?php
+				
+				include('PHP/config.php');
+					$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+					$result = $mysqli->query("SELECT * FROM Albums");
+					$firstrow = true;
+					while($row = $result->fetch_assoc()){
+						if($firstrow){
+							$stylestr = "style='display : block;'";
+							$firstrow = false;
+						} else{
+							$stylestr = "";
+						}
+						
+							echo "<div class= 'imagegallery'>
+										<h2> <a href='#!'>$row[title]</a></h2>
+										<div class='albumwrapper' $stylestr>
+										<br>
+											<div class='description'> $row[description]
+											<br> Last modified on $row[date_modified]
+											</div>
+											<div class='album'>";
+											
+											
+							$result2 = $mysqli->query("SELECT * FROM Images INNER JOIN ImagesInAlbums ON Images.imageID = ImagesInAlbums.imageID WHERE albumID = $row[albumID]");
+						
+							while($row2 = $result2->fetch_assoc()){
+								$path = substr($row2['source_file'],3); 
+								
+								echo "<a href='$path ' data-lightbox='$row[albumID]' data-title='$row2[caption]'>";
+								echo '<div class="imagebox" style="background-image: url(\' ';
+								echo $path;
+								echo'\');"> </div>';
+								
+								echo "</a>";
+							}
+							echo "</div></div></div>";
+					}
+	
+				?>
+				<script>
+					
+				$('.imagegallery h2').click(function() {
+					var wrap = $(this).next();
+					
+					if(wrap.css("display") == "none"){
+						wrap.slideToggle(1000,"easeOutElastic");
+					}else{
+						wrap.slideToggle(250,"easeOutExpo");
+					}
+				})
+					
+				</script>
+					
+					
 				<br>
-				<div class="imagegallery">
-					<div class="imagebox" style="background-image: url('Images/Concept1.jpg');">	</div>
-					<div class="imagebox" style="background-image: url('Images/Concept2.jpg');">	</div>
-					<div class="imagebox" style="background-image: url('Images/Concept3.jpg');">	</div>
-					<div class="imagebox" style="background-image: url('Images/Concept4.jpg');">	</div>
-					<div class="imagebox" style="background-image: url('Images/Concept5.jpg');">	</div>
-				</div>
-				<br>
-			</div>
+		</div>
 			<div id="team" class="page" >
 				<h1>TEAM</h1>
 				<div class="layout">
@@ -141,15 +201,16 @@
 			<div id="contact" class="page" >
 				<h1>CONTACT US</h1>     
 				<br>
-            	<form id="testForm" class = "pure-form pure-form-stacked" method="post" action="#" name = "submit">
+            	<form id="testForm" class = "pure-form pure-form-stacked" method="post" action="PHP/contact.php" name = "submit">
                 	<input name="name" class = "input-block" type="text" placeholder="Name">
                 	<input name="email" type="text" placeholder="Email">
-                	<input style="display:none;" type="text" name="email_" value="" />
-                	<textarea name="message" placeholder="Message"></textarea>
+                  	<textarea name="message" placeholder="Message"></textarea>
                 <input type="submit" class = "btn btn-block" value="Submit" name="submit">
             	</form>
 				<br>
 			</div>
 		</div>
+		
+		<script src="JS/lightbox.js"></script>
 	</body>	
 </html>
