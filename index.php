@@ -42,10 +42,18 @@
 
 				<br>
 			</div>
+			<div id="aboutbanner" class="banner">
+				<img src="Images/aboutbanner.png" alt="about banner">
+					<br>
+			</div>
 			<div id ="about" class="page">
 				<h1>THE PATH OF THE WARRIOR</h1> 
 				<p class="info">Dash is a fast-paced flight action game where you must maneuver around enemies to stay airborne. While traditional platformers use attacks as secondary actions, dashing is used to both navigate through the level and defeat opponents.</p>
 				<br>
+			</div>
+			<div id="characterbanner" class="banner">
+				<img src="Images/characterbanner.png" alt="character banner">
+					<br>
 			</div>
 			<div id="characters" class="page" >
 				<h1>CHARACTERS</h1> 
@@ -87,11 +95,19 @@
 				</div>
 				
 			</div>
+			<div id="instructionsbanner" class="banner">
+				<img src="Images/instructionsbanner.png" alt="about banner">
+					<br>
+			</div>
 			<div id="instructions" class="page" >
 				<h1>INSTRUCTIONS</h1>
 				<p class="info">Your task is simple yet challenging: complete the martial trials set by the gods themselves by dashing through your enemies.</p>
 				<p class="info">Master the art of flight as you explore distant lands on your journey to restore prestige to your fallen master's school.</p>
 				<p class="info">While traditional platformers use attacks as secondary actions, dashing is used to both navigate through the level and defeat your opponents. Sharpen your reflexes and get ready for our selective Beta release, coming soon.</p>
+			</div>
+			<div id="gallerybanner" class="banner">
+				<img src="Images/gallerybanner.png" alt="gallery banner">
+					<br>
 			</div>
 			<div id="gallery" class="page" >
 				<h1>GALLERY</h1>
@@ -105,38 +121,53 @@
 				</div>
 				<br>
 			</div>
+			<div id="teambanner" class="banner">
+				<img src="Images/teambanner.png" alt="about banner">
+					<br>
+			</div>
 			<div id="team" class="page" >
 				<h1>TEAM</h1>
 				<div class="layout">
 					<span>
 						<img src="Images/portrait.png" class="staffpic" alt="Dash wanderer">
 						<br>
-						Jackson
+						Noah Grossman
 						<br>
-						Developer
+						Project Lead
 					</span>
 					<span>
 						<img src="Images/portrait2.png" class="staffpic"  alt="Dash sentinel">
 						<br>
-						Aimee
+						Karen Zhou
 						<br>
 						Lead Design
 					</span>
 					<span>
 						<img src="Images/portrait3.png" class="staffpic"  alt="Dash aegis">
 						<br>
-						Michael
+						Sofonias Assefa
 						<br>
-						Marketing
+						Developer
 					</span>
 					<span>
 						<img src="Images/portrait4.png" class="staffpic"   alt="Dash ballista">
 						<br>
-						Emily
+						Roger Chen
+						<br>
+						Developer
+					</span>
+					<span>
+						<img src="Images/portrait4.png" class="staffpic"   alt="Dash ballista">
+						<br>
+						Robin Martin
 						<br>
 						Developer
 					</span>
 				</div>
+			</div>
+			<div id="contactbanner" class="banner">
+				<img src="Images/contactbanner.png" alt="contact banner">
+					<br>
 			</div>
 			<div id="contact" class="page" >
 				<h1>CONTACT US</h1>     
